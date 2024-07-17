@@ -1,0 +1,598 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row ui-overview-settings pb-5">
+      <div class="col ui-overview shadow">
+        <div class="row overview_row">
+          <div class="ms-5 col-1 text-center">
+            <div class="row">
+              <div class="col overview_first_row mb-1">
+                ID
+              </div>
+            </div>
+            <div class="row">
+              <div class="col overview_second_row" id="idCopyFromSettings">
+                <p>HELLO8</p>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="row">
+              <div class="col overview_first_row mb-1">
+                IdTag
+              </div>
+            </div>
+            <div class="row">
+              <div class="col overview_second_row" id="idTagCopyFromSettings">
+                <p>QRq_F</p>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="row">
+              <div class="col overview_first_row mb-1">
+                ConnectorID
+              </div>
+            </div>
+            <div class="row">
+              <div class="col overview_second_row" id="connectorIDCopyFromSettings">
+                1
+              </div>
+            </div>
+          </div>
+          <div class="col text-center">
+            <div class="row">
+              <div class="col overview_first_row mb-1">
+                ChargePointStatus
+              </div>
+            </div>
+            <div class="row">
+              <div class="col overview_status" id="chargePointStatusCopyFromSettings">
+                Available
+              </div>
+            </div>
+          </div>
+          <div class="col-1 text-end d-flex flex-column justify-content-center align-items-center">
+            <img src="./ui_menue.png" class="img-fluid" alt="..." onclick="jump_to_location(this.id)" id="settingsID">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div id="container" class="row">
+          <!--<div class="position-absolute text-success hightIndex importNotification col">
+              <div class="row">
+                <div class="col text-center opacity100">
+                  abcfgsdfasdfsadfsafasfdas
+                </div>
+              </div>
+          </div> -->
+          <div id="container2" class="position-relative">
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center cardStart" onmousedown="addNewElementStart(this.id)">
+                      <p class="m-0">Start</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center cardEnd" onmousedown="addNewElementEnd(this.id)">
+                      <p class="m-0">End</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card" onmousedown="addNewElementConnect(this.id)">
+                      <p class="m-0">Connect</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card2" onmousedown="addNewElementAuthorize(this.id)">
+                      <p class="m-0">Authorize</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card3" onmousedown="addNewElementStartTransaction(this.id)">
+                      <p class="m-0 font-size-10">Start Transaction</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card4" onmousedown="addNewElementStopTransaction(this.id)">
+                      <p class="m-0 font-size-10">Stop Transaction</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card5" onmousedown="addNewElementStatus(this.id)">
+                      <p class="m-0">Status</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card6" onmousedown="addNewElementDisconnect(this.id)">
+                      <p class="m-0">Disconnect</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card7" onmousedown="addNewElementWait(this.id)">
+                      <p class="m-0">Wait</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card8" onmousedown="addNewElementMultiplierStart(this.id)">
+                      <p class="m-0 font-size-10">Multiplier start</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-center d-flex flex-column justify-content-center align-items-center card9" onmousedown="addNewElementMultiplierEnd(this.id)">
+                      <p class="m-0 font-size-10">Multiplier end</p>
+                      <img src="./img/icons8-hinzufuegen-40.png" class="img-thumbnail addImgSize" alt="img of an add symbole">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col spacer">
+                <div class="row" id="addHere">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        <button type="button" class="btn btn-success" onclick="startProcess()">Start</button>
+      </div>
+      <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+        <input type="file" name="inputfile" id="inputfile">
+      </div>
+          <div class="row">
+      <div class="col">
+        <pre id="output"></pre>
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="row text-center pt-5 pb-5">
+      <div class="col-5">
+        <div class="row border-top text-start pb-3">
+          <div class="col ui-setting-text">
+            Output
+          </div>
+          <div class="col ui-setting-text text-end">
+            <button class="btn btn-primary-V2 shadow" onclick="clearOutputText()">Clear output</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-start overflow-auto container-hight" id="addOutput">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row mb-5">
+          <div class="col">
+            <button type="button" class="btn btn-primary shadow" id="btn-connect-disconnect" onclick="connect()">
+              <div class="row">
+                <div class="col">
+                  <span class="align-middle">CONNECT</span>
+                </div>
+                <div class="col-3 colorOne">
+                  <img src="./ui_access.png" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary shadow disabled" onclick="disconnect()">
+              <div class="row">
+                <div class="col">
+                  <span class="align-middle">ReserveNow</span>
+                </div>
+                <div class="col-3">
+                  <img src="./ui_access.png" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col">
+            <button type="button" class="btn btn-primary shadow" onclick="authorize()">
+              <div class="row">
+                <div class="col">
+                  <span class="align-middle">AUTHORIZE</span>
+                </div>
+                <div class="col-3 colorOne">
+                  <img src="./ui_access.png" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary shadow" onclick="startTransactionBtn()">
+              <div class="row">
+                <div class="col">
+                  <span class="align-middle">START TRANSACTION</span>
+                </div>
+                <div class="col-3 colorOne">
+                  <img src="./ui_access.png" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col">
+            <button type="button" class="btn btn-primary shadow" onclick="stopTransactionBtn()">
+              <div class="row">
+                <div class="col">
+                  <span class="align-middle">STOP TRANSACTION</span>
+                </div>
+                <div class="col-3 colorOne">
+                  <img src="./ui_access.png" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary shadow" onclick="statusNotification()">
+              <div class="row">
+                <div class="col">
+                  <span class="align-middle">STATUS NOTIFICATION</span>
+                </div>
+                <div class="col-3 colorOne">
+                  <img src="./ui_access.png" class="img-fluid" alt="...">
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-4" id='jump_to_location_settings'>
+      <div class="col-sm scope-padding-left scope-padding-right">
+      </div>
+    </div>
+
+    <div class="row mb-3 border-top mt-5">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start ui-setting-text">
+        Settings
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        Endpoint URL
+      </div>
+      <div class="col ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="endpointUrl" value="wss://ocpp-server.site:8443/steve/websocket/CentralSystemService/">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        ID
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="id" value="HELLO12">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        ConnectorID
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <select class="custom-select" id="inputConnectorId">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        ChargePointErrorCode
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <select class="custom-select" id="inputErrorCode">
+          <option value="NoError">NoError</option>
+          <option value="EVCommunicationError">EVCommunicationError</option>
+          <option value="GroundFailure">GroundFailure</option>
+          <option value="HighTemperature">HighTemperature</option>
+          <option value="InternalError">InternalError</option>
+          <option value="LocalListConflict">LocalListConflict</option>
+          <option value="ConnectorLockFailure">ConnectorLockFailure</option>
+          <option value="OtherError">OtherError</option>
+          <option value="OverCurrentFailure">OverCurrentFailure</option>
+          <option value="OverVoltage">OverVoltage</option>
+          <option value="PowerMeterFailure">PowerMeterFailure</option>
+          <option value="PowerSwitchFailure">PowerSwitchFailure</option>
+          <option value="ReaderFailure">ReaderFailure</option>
+          <option value="ResetFailure">ResetFailure</option>
+          <option value="UnderVoltage">UnderVoltage</option>
+          <option value="WeakSignal">WeakSignal</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        ChargePointStatus
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <select class="custom-select" id="inputChargePointStatus">
+          <option value="Available">Available</option>
+          <option value="Preparing">Preparing</option>
+          <option value="Charging">Charging</option>
+          <option value="SuspendedEVSE">SuspendedEVSE</option>
+          <option value="SuspendedEV">SuspendedEV</option>
+          <option value="Finishing">Finishing</option>
+          <option value="Reserved">Reserved</option>
+          <option value="Unavailable">Unavailable</option>
+          <option value="Faulted">Faulted</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        idTag
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <select class="custom-select" id="inputGroupSelect01">
+          <option value="QRq_F">QRq_F</option>
+          <option value="123">123</option>
+          <option value="04B0267AE05C87">04B0267AE05C87</option>
+          <option value="qweR1234">qweR1234</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        meterStart
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput2">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        reservationID
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput3">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        meterStop
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput4">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        transactionData
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput5">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        chargePointVendor
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput6" value="AVT-Company">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        chargePointModel
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput7" value="AVT-Express">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        chargePointSerialNumber
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput8" value="avt.001.13.1">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        chargeBoxSerialNumber
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput9" value="avt.001.13.1.01">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        firmwareVersion
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput10" value="0.9.87">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        iccid
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput11">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        imsi
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput12">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        meterType
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput13" value="AVT NQC-ACDC">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        meterValue
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput14">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        meterValueUnit
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput15">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        meterValueTransaction
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput16">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        meterSerialNumber
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput17" value="avt.001.13.1.01">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2 d-flex flex-column justify-content-center align-items-start">
+        datatransfer
+      </div>
+      <div class="col-2 ui-settings shadow d-flex flex-column justify-content-center align-items-start ps-3">
+        <input class="form-control shadow-none" id="exampleFormControlInput18">
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+  <a target="_blank" href="https://icons8.com/icon/tzmS5kA16THe/%3E">></a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+  <a target="_blank" href="https://icons8.com/icon/21622/men%C3%BC-2">Menü 2</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+  <a target="_blank" href="https://icons8.com/icon/84991/add">Hinzufügen</a> Icon von <a target="_blank" href="https://icons8.com">Icons8</a>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script defer src="https://unpkg.com/@lf2com/magnet.js@latest/dist/magnet.min.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

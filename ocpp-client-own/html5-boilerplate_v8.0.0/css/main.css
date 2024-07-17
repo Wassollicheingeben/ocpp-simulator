@@ -1,0 +1,869 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.btn-primary{
+  min-width: 20em;
+  min-height: 4em;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  line-height: 3em;
+  border-style: none;
+  border-radius: 1em;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #000000;
+    background-color: #e1e6e1;
+    border-style: none;
+}
+
+.btn-primary.disabled, .btn-primary:disabled
+{
+    background-color: #f2f2f2;
+    color: #919191;
+}
+
+.btn-primary-V2{
+  min-width: 10em;
+  min-height: 2em;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1em;
+  border-style: none;
+  border-radius: 1em;
+}
+
+.btn-primary-V2:hover, .btn-primary-V2:focus, .btn-primary-V2:active, .btn-primary-V2.active, .open>.dropdown-toggle.btn-primary-V2 {
+    color: #000000;
+    background-color: #e1e6e1;
+    border-style: none;
+}
+
+.custom-select{
+  border-style: none;
+}
+
+select:hover, select:focus, select:active, select.active{
+    outline: none !important;
+}
+
+.ui-overview{
+  min-height: 5em;
+  background-color: #ffffff;
+  border-radius: 2em;
+}
+
+.overview_first_row{
+  color: #ABABAB;
+}
+
+.overview_second_row{
+  font-weight: bold;
+}
+
+.overview_row{
+  min-height: 5em;
+}
+
+.overview_status{
+  font-weight: bold;
+  color: #37AA43;
+}
+
+.ui-settings{
+  min-height: 3em;
+  background-color: #ffffff;
+  border-radius: 2em;
+}
+
+.form-control{
+  border-style: none;
+}
+
+.ui-setting-text{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.container-hight{
+  max-height: 15em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #container{
+    background-color:#212228;
+    background-image: linear-gradient(#292a30 .1em, transparent .1em),
+    linear-gradient(90deg, #292a30 .1em, transparent .1em);
+    background-size: 4em 4em;
+    height: 30em;
+  }
+
+
+  .card{
+    width: 100px;
+    height: 100px;
+    background-color: #AFDA9F;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    border-right: 0.8em solid #212228;
+    border-top: 0.1em solid #212228;
+    border-bottom: 0.1em solid #212228;
+    padding: 5px;
+  }
+
+
+  .card:after, .card:before{
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card:after{
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #88b7d5;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+.card:before{
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #c2e1f5;
+  border-width: 13px;
+  margin-top: -13px;
+}
+
+  .card2{
+    width: 100px;
+    height: 100px;
+    background-color: #3281a8;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    border-right: 0.8em solid #212228;
+    border-top: 0.1em solid #212228;
+    border-bottom: 0.1em solid #212228;
+    padding: 5px;
+  }
+
+  .card2:after, .card2:before{
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card2:after{
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #88b7d5;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+.card2:before{
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #c2e1f5;
+  border-width: 13px;
+  margin-top: -13px;
+}
+
+  .card3{
+    width: 100px;
+    height: 100px;
+    background-color: #a83287;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    border-right: 0.8em solid #212228;
+    border-top: 0.1em solid #212228;
+    border-bottom: 0.1em solid #212228;
+    padding: 5px;
+  }
+
+  .card3:after, .card3:before{
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card3:after{
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #88b7d5;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+.card3:before{
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #c2e1f5;
+  border-width: 13px;
+  margin-top: -13px;
+}
+
+  .card4{
+    width: 100px;
+    height: 100px;
+    background-color: #34ebcf;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    border-right: 0.8em solid #212228;
+    border-top: 0.1em solid #212228;
+    border-bottom: 0.1em solid #212228;
+    padding: 5px;
+  }
+
+  .card4:after, .card4:before{
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card4:after{
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #88b7d5;
+  border-width: 10px;
+  margin-top: -10px;
+}
+
+.card4:before{
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #c2e1f5;
+  border-width: 13px;
+  margin-top: -13px;
+}
+
+.card5{
+  width: 100px;
+  height: 100px;
+  background-color: #cc8631;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  border-right: 0.8em solid #212228;
+  border-top: 0.1em solid #212228;
+  border-bottom: 0.1em solid #212228;
+  padding: 5px;
+}
+
+.card5:after, .card5:before{
+left: 100%;
+top: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+z-index: 2;
+}
+
+.card5:after{
+border-color: rgba(136, 183, 213, 0);
+border-left-color: #88b7d5;
+border-width: 10px;
+margin-top: -10px;
+}
+
+.card5:before{
+border-color: rgba(194, 225, 245, 0);
+border-left-color: #c2e1f5;
+border-width: 13px;
+margin-top: -13px;
+}
+
+.card6{
+  width: 100px;
+  height: 100px;
+  background-color: #a83279;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  border-right: 0.8em solid #212228;
+  border-top: 0.1em solid #212228;
+  border-bottom: 0.1em solid #212228;
+  padding: 5px;
+}
+
+.card6:after, .card6:before{
+left: 100%;
+top: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+z-index: 2;
+}
+
+.card6:after{
+border-color: rgba(136, 183, 213, 0);
+border-left-color: #88b7d5;
+border-width: 10px;
+margin-top: -10px;
+}
+
+.card6:before{
+border-color: rgba(194, 225, 245, 0);
+border-left-color: #c2e1f5;
+border-width: 13px;
+margin-top: -13px;
+}
+
+.card7{
+  width: 100px;
+  height: 100px;
+  background-color: #becc43;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  border-right: 0.8em solid #212228;
+  border-top: 0.1em solid #212228;
+  border-bottom: 0.1em solid #212228;
+  padding: 5px;
+}
+
+.card7:after, .card7:before{
+left: 100%;
+top: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+z-index: 2;
+}
+
+.card7:after{
+border-color: rgba(136, 183, 213, 0);
+border-left-color: #88b7d5;
+border-width: 10px;
+margin-top: -10px;
+}
+
+.card7:before{
+border-color: rgba(194, 225, 245, 0);
+border-left-color: #c2e1f5;
+border-width: 13px;
+margin-top: -13px;
+}
+
+.card8{
+  width: 100px;
+  height: 100px;
+  background-color: #2c7d65;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  border-right: 0.8em solid #212228;
+  border-top: 0.1em solid #212228;
+  border-bottom: 0.1em solid #212228;
+  padding: 5px;
+}
+
+.card8:after, .card8:before{
+left: 100%;
+top: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+z-index: 2;
+}
+
+.card8:after{
+border-color: rgba(136, 183, 213, 0);
+border-left-color: #88b7d5;
+border-width: 10px;
+margin-top: -10px;
+}
+
+.card8:before{
+border-color: rgba(194, 225, 245, 0);
+border-left-color: #c2e1f5;
+border-width: 13px;
+margin-top: -13px;
+}
+
+.card9{
+  width: 100px;
+  height: 100px;
+  background-color: #b042f5;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  border-right: 0.8em solid #212228;
+  border-top: 0.1em solid #212228;
+  border-bottom: 0.1em solid #212228;
+  padding: 5px;
+}
+
+.card9:after, .card9:before{
+left: 100%;
+top: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+z-index: 2;
+}
+
+.card9:after{
+border-color: rgba(136, 183, 213, 0);
+border-left-color: #88b7d5;
+border-width: 10px;
+margin-top: -10px;
+}
+
+.card9:before{
+border-color: rgba(194, 225, 245, 0);
+border-left-color: #c2e1f5;
+border-width: 13px;
+margin-top: -13px;
+}
+
+.font-size-10{
+  font-size: 10px;
+}
+
+.cardStart{
+  width: 100px;
+  height: 100px;
+  background-color: #349e50;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  border-right: 0.8em solid #212228;
+  border-top: 0.1em solid #212228;
+  border-bottom: 0.1em solid #212228;
+  padding: 5px;
+}
+
+.cardStart:after, .cardStart:before{
+left: 100%;
+top: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+z-index: 2;
+}
+
+.cardStart:after{
+border-color: rgba(136, 183, 213, 0);
+border-left-color: #88b7d5;
+border-width: 10px;
+margin-top: -10px;
+}
+
+.cardStart:before{
+border-color: rgba(194, 225, 245, 0);
+border-left-color: #c2e1f5;
+border-width: 13px;
+margin-top: -13px;
+}
+
+.cardEnd{
+  width: 100px;
+  height: 100px;
+  background-color: #9e3446;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  border-right: 0.8em solid #212228;
+  border-top: 0.1em solid #212228;
+  border-bottom: 0.1em solid #212228;
+  padding: 5px;
+}
+
+.cardEnd:after, .cardEnd:before{
+left: 100%;
+top: 50%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+z-index: 2;
+}
+
+.cardEnd:after{
+border-color: rgba(136, 183, 213, 0);
+border-left-color: #88b7d5;
+border-width: 10px;
+margin-top: -10px;
+}
+
+.cardEnd:before{
+border-color: rgba(194, 225, 245, 0);
+border-left-color: #c2e1f5;
+border-width: 13px;
+margin-top: -13px;
+}
+
+  .spacer
+  {
+    margin-left: 10em;
+  }
+
+
+
+.addImgSize{
+  height: 2.5em;
+  background-color: transparent;
+  border-style: none;
+}
+
+
+
+
+
+
+.hightIndex{
+  z-index: 100;
+}
+
+.importNotification{
+  width: 65%;
+  height: 100%;
+  background-color: #4dba41;
+  opacity: 0.4;
+}
+
+.opacity100{
+  opacity: 1.0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
